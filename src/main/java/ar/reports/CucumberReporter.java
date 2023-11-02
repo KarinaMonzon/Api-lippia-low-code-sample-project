@@ -5,6 +5,7 @@ import com.crowdar.driver.DriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+
 public class CucumberReporter extends ExtentCucumberGenericAdapter {
 
     public CucumberReporter(String arg) {
@@ -21,3 +22,4 @@ public class CucumberReporter extends ExtentCucumberGenericAdapter {
         return true;
     }
 }
+
