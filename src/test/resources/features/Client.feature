@@ -7,27 +7,28 @@ Feature: User
 
   @CreatClient
   Scenario: Create a customer
-    Given call Workspaces.feature@ConsultWorkspaces
-    And endpoint /v1/workspaces/{{id}}/clients
+   Given call Workspaces.feature@ConsultWorkspaces
+    And endpoint /v1/workspaces/{{idWorkspaces}}/clients
     And body client.json
     When execute method POST
     Then the status code should be 201
-    And response should be name  = Agustina
+    And response should be name  = luna
 
   @ConsultClient
   Scenario: consult customer
     Given call Workspaces.feature@ConsultWorkspaces
-    And  endpoint /v1/workspaces/{{id}}/clients
+    And  endpoint /v1/workspaces/{{idWorkspaces}}/clients
     And header Accept = */*
     When execute method GET
     Then the status code should be 200
-    * define idClient = $.[0].id
+    * define idClient = $.[1].id
+    * define idWorkspaces = $.[1].workspaceId
 
 
-  @DeleteClient
+  @DeleteClient @Test
   Scenario: Delete customer
-    Given call Client.feature@ConsulCliente
-    And endpoint /v1/workspaces/{{id}}/clients/{{idClient}}
+    Given call Client.feature@ConsultClient
+    And endpoint /v1/workspaces/{{idWorkspaces}}/clients/{{idClient}}
     When execute method DELETE
     Then the status code should be 200
 

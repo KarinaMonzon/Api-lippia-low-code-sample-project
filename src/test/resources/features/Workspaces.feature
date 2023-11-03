@@ -20,7 +20,9 @@ Feature: Workspaces
     Given endpoint /v1/workspaces
     When execute method GET
     And the status code should be 200
-    * define id = $.[1].id
+    * define idWorkspaces = $.[0].id
+
+
 
     
 
