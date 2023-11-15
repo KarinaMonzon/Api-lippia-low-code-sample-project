@@ -1,0 +1,25 @@
+{
+  "billable": true,
+  "customAttributes": [
+    {
+      "name": "",
+      "namespace": "",
+      "value": ""
+    }
+  ],
+  "customFields": [
+    {
+      "customFieldId": "",
+      "sourceType": "WORKSPACE",
+      "value": {}
+    }
+  ],
+  "description": "Crowdar Academy 2023",
+  "end": "2023-11-15T14:30:22Z",
+  "projectId": "6554f3273e15db0a9af834d7",
+  "start": "2023-11-15T14:15:22Z",
+  "tagIds": [
+    ""
+  ],
+  "taskId": ""
+}
